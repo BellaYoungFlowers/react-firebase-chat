@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./chat.css";
 const Chat = () => {
+  // 输入框文本
+  const [Text, setText] = useState("");
   return (
     <div className="chat">
       <div className="top">
@@ -25,7 +27,7 @@ const Chat = () => {
           <img src="./more.png" alt="" />
         </div>
         <input type="text" placeholder="Send a Message" />
-        <img className="emoji" src="./emoj.png" alt="" />
+        <img className="emoji" src="./emoji.png" alt="" />
         <button>Send</button>
       </div>
     </div>
