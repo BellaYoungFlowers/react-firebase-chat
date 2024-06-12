@@ -7,19 +7,83 @@
   .top {
     .user {
       img {
-        width: 50px;
-        height: 50px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
       }
     }
   }
   .center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    .message {
+      display: flex;
+      /* align-items: center; */
+      gap: 15px;
+      padding: 20px;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img{
+          width: 100%;
+          height: 300px;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+      p {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        background: rgba(9, 6, 6, 0.25);
+        border: 2px white solid;
+        border-radius: 10px;
+      }
+      span {
+        font-weight: 300;
+      }
+    }
+
+    /* 控制聊天发送方和接收方位置 */
+    .own {
+      flex-direction: row-reverse;
+      .text {
+        p {
+          align-self: flex-end;
+        }
+        span {
+          align-self: flex-end;
+        }
+      }
+    }
   }
 
   .bottom {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
+    gap: 10px;
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+      }
+    }
 
     input {
       flex: 1;
@@ -27,10 +91,23 @@
       border: none;
       padding: 5px;
       background: rgba(57, 77, 67, 0.25);
-      color:white
+      color: white;
+    }
+
+    .emoji {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      position: relative;
+      .picker {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+      }
     }
 
     button {
+      color: white;
       padding: 5px;
       border: none;
       border-radius: 5px;

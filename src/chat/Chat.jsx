@@ -26,17 +26,104 @@ const Chat = () => {
           </div>
         </div>
         <div className="icons">
-          <img src="./more.png" alt="" />
+          <img src="./phone.png" alt="" />
           <img src="./video.png" alt="" />
-          <img src="./mic.png" alt="" />
+          <img src="./info.png" alt="" />
         </div>
       </div>
-      <div className="center"></div>
+      <div className="center">
+        <div className="message own">
+          <img src="./avatar.png" alt="" />
+          <div className="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quae, accusantium praesentium cumque et similique facere sit in
+              omnis a esse veritatis inventore eos eaque culpa deserunt eius
+              molestias nihil!
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quae, accusantium praesentium cumque et similique facere sit in
+              omnis a esse veritatis inventore eos eaque culpa deserunt eius
+              molestias nihil!
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <img src="./avatar.png" alt="" />
+          <div className="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quae, accusantium praesentium cumque et similique facere sit in
+              omnis a esse veritatis inventore eos eaque culpa deserunt eius
+              molestias nihil!
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quae, accusantium praesentium cumque et similique facere sit in
+              omnis a esse veritatis inventore eos eaque culpa deserunt eius
+              molestias nihil!
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <img src="./avatar.png" alt="" />
+          <div className="text">
+            <img src="./taylor.jpg" alt=""/>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quae, accusantium praesentium cumque et similique facere sit in
+              omnis a esse veritatis inventore eos eaque culpa deserunt eius
+              molestias nihil!
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quae, accusantium praesentium cumque et similique facere sit in
+              omnis a esse veritatis inventore eos eaque culpa deserunt eius
+              molestias nihil!
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <img src="./avatar.png" alt="" />
+          <div className="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quae, accusantium praesentium cumque et similique facere sit in
+              omnis a esse veritatis inventore eos eaque culpa deserunt eius
+              molestias nihil!
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+      </div>
+
       <div className="bottom">
         <div className="icons">
-          <img src="./more.png" alt="" />
-          <img src="./more.png" alt="" />
-          <img src="./more.png" alt="" />
+          <img src="./img.png" alt="" />
+          <img src="./camera.png" alt="" />
+          <img src="./mic.png" alt="" />
         </div>
         <input
           type="text"
@@ -44,15 +131,23 @@ const Chat = () => {
           value={Text}
           onChange={handleInput}
         />
-        <img
-          className="emoji"
-          src="./emoji.png"
-          alt=""
-          onClick={() => {
-            setOpen(!Open);
-          }}
-        />
-        <EmojiPicker open={Open} onEmojiClick={handleEmojiClick}></EmojiPicker>
+        <div className="emoji">
+          <img
+            className="emoji"
+            src="./emoji.png"
+            alt=""
+            onClick={() => {
+              setOpen(!Open);
+            }}
+          />
+          <div className="picker">
+            <EmojiPicker
+              open={Open}
+              onEmojiClick={handleEmojiClick}
+            ></EmojiPicker>
+          </div>
+        </div>
+
         <button>Send</button>
       </div>
     </div>
