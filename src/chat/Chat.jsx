@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import EmojiPicker from "emoji-picker-react";
 import "./chat.css";
 const Chat = () => {
@@ -13,8 +13,14 @@ const Chat = () => {
     setText((pre) => pre + e.emoji);
     setOpen(false);
   };
-
   console.log(Text);
+
+  // 每次进入聊天页面，定位到最新一条消息
+  const endRef = useRef(null);
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <div className="chat">
       <div className="top">
@@ -83,7 +89,7 @@ const Chat = () => {
         <div className="message own">
           <img src="./avatar.png" alt="" />
           <div className="text">
-            <img src="./taylor.jpg" alt=""/>
+            <img src="./taylor.jpg" alt="" />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
               quae, accusantium praesentium cumque et similique facere sit in
@@ -117,6 +123,8 @@ const Chat = () => {
             <span>1 min ago</span>
           </div>
         </div>
+
+        <div ref={endRef}></div>
       </div>
 
       <div className="bottom">

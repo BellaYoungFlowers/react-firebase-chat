@@ -1,6 +1,7 @@
 .chatList {
   flex: 1;
   overflow: scroll;
+  overflow-x: hidden; /* 禁用横向滚动条 */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -34,4 +35,29 @@
       }
     }
   }
+}
+/* WebKit 浏览器 (例如 Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* 设置滚动条宽度 */
+}
+
+::-webkit-scrollbar-track {
+  background: #a73b3b; /* 设置轨道背景颜色 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #060735; /* 设置滑块背景颜色 */
+}
+
+/* Firefox 浏览器 */
+::-moz-scrollbar {
+  width: 5px; /* 设置滚动条宽度 */
+}
+
+::-moz-scrollbar-track {
+  background: #940d0d; /* 设置轨道背景颜色 */
+}
+
+::-moz-scrollbar-thumb {
+  background: #16b3be; /* 设置滑块背景颜色 */
 }
