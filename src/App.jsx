@@ -3,7 +3,7 @@ import Chat from "./chat/Chat";
 import Detail from "./detail/Detail";
 import Login from "./login/Login";
 const App = () => {
-  const user = false;
+  const user = true;
   return (
     <div className="container">
       {user ? (
